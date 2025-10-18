@@ -12,7 +12,7 @@ export default defineConfig({
     ['list']
   ],
   use: {
-    baseURL: 'https://mundocomputo.vercel.app',
+    baseURL: 'https://mundocomputoo.vercel.app',
     actionTimeout: 10000,
     navigationTimeout: 15000,
     trace: 'on-first-retry',
