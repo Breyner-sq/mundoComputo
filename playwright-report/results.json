@@ -94,7 +94,7 @@
           "specs": [
             {
               "title": "debe mostrar la página de login",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -105,60 +105,26 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 111,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 6497,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:11:24",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                          "column": 24,
-                          "line": 11
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe mostrar la página de login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 10 |\u001b[39m     \u001b[90m// Verificar que estamos en la página principal\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verificar que hay algún input en la página\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m hasInputs \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input'\u001b[39m)\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     expect(hasInputs)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                            "column": 24,
-                            "line": 11
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe mostrar la página de login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 10 |\u001b[39m     \u001b[90m// Verificar que estamos en la página principal\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// Verificar que hay algún input en la página\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m hasInputs \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input'\u001b[39m)\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m     expect(hasInputs)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:11:24\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1757,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:33.702Z",
+                      "startTime": "2025-10-18T18:17:02.771Z",
                       "annotations": [],
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Autenticación-E2E-debe-mostrar-la-página-de-login-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Autenticación-E2E-debe-mostrar-la-página-de-login-chromium/error-context.md"
-                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Autenticación-E2E-debe-mostrar-la-página-de-login-chromium/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                        "column": 24,
-                        "line": 11
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "d748ac400d08b85935ef-d6087e49747b55f8a92a",
@@ -179,15 +145,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1546,
+                      "duration": 1569,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:33.723Z",
+                      "startTime": "2025-10-18T18:17:02.775Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -203,7 +169,7 @@
               ],
               "id": "d748ac400d08b85935ef-2aa1f4a7a3671b3133f0",
               "file": "auth.spec.ts",
-              "line": 17,
+              "line": 26,
               "column": 3
             },
             {
@@ -219,15 +185,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1549,
+                      "duration": 1533,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:33.701Z",
+                      "startTime": "2025-10-18T18:17:02.784Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -243,7 +209,7 @@
               ],
               "id": "d748ac400d08b85935ef-00d969c5e21b6b36c629",
               "file": "auth.spec.ts",
-              "line": 22,
+              "line": 31,
               "column": 3
             },
             {
@@ -259,15 +225,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 12,
+                      "workerIndex": 114,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1550,
+                      "duration": 1544,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:33.696Z",
+                      "startTime": "2025-10-18T18:17:02.770Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -283,7 +249,7 @@
               ],
               "id": "d748ac400d08b85935ef-a77ac95ad782c0f66afa",
               "file": "auth.spec.ts",
-              "line": 27,
+              "line": 36,
               "column": 3
             },
             {
@@ -299,15 +265,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 13,
+                      "workerIndex": 115,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1548,
+                      "duration": 1569,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:33.700Z",
+                      "startTime": "2025-10-18T18:17:02.782Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -323,7 +289,7 @@
               ],
               "id": "d748ac400d08b85935ef-608cbc17f63a54a0559b",
               "file": "auth.spec.ts",
-              "line": 32,
+              "line": 41,
               "column": 3
             }
           ]
@@ -331,12 +297,12 @@
         {
           "title": "Navegación después de login",
           "file": "auth.spec.ts",
-          "line": 38,
+          "line": 47,
           "column": 6,
           "specs": [
             {
               "title": "debe redirigir a dashboard después de login exitoso",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -347,70 +313,36 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
-                      "status": "failed",
-                      "duration": 6099,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/auth|login/\u001b[39m\nReceived string: \u001b[31m\"https://mundocomputoo.vercel.app/\u001b[7mauth\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/auth|login/\u001b[39m\nReceived string: \u001b[31m\"https://mundocomputoo.vercel.app/\u001b[7mauth\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:43:28",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                          "column": 28,
-                          "line": 43
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[90m// Solo navegar a una página y verificar que no es la de login\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/auth|login/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m   test(\u001b[32m'debe mantener sesión después de refrescar'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                            "column": 28,
-                            "line": 43
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).not.\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: not \u001b[32m/auth|login/\u001b[39m\nReceived string: \u001b[31m\"https://mundocomputoo.vercel.app/\u001b[7mauth\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[90m// Solo navegar a una página y verificar que no es la de login\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/auth|login/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m   test(\u001b[32m'debe mantener sesión después de refrescar'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:43:28\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2702,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:35.596Z",
+                      "startTime": "2025-10-18T18:17:04.656Z",
                       "annotations": [],
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-addeb-rd-después-de-login-exitoso-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-addeb-rd-después-de-login-exitoso-chromium/error-context.md"
-                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-addeb-rd-después-de-login-exitoso-chromium/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                        "column": 28,
-                        "line": 43
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "d748ac400d08b85935ef-401653f7492ede45403d",
               "file": "auth.spec.ts",
-              "line": 39,
+              "line": 48,
               "column": 3
             },
             {
               "title": "debe mantener sesión después de refrescar",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -421,70 +353,36 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 1533,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://mundocomputoo.vercel.app/a\u001b[7mdmin\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://mundocomputoo.vercel.app/a\u001b[7muth\u001b[27m\"\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://mundocomputoo.vercel.app/a\u001b[7mdmin\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://mundocomputoo.vercel.app/a\u001b[7muth\u001b[27m\"\u001b[39m\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:51:24",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                          "column": 24,
-                          "line": 51
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoBe(currentUrl)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m   test(\u001b[32m'debe cerrar sesión correctamente'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                            "column": 24,
-                            "line": 51
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"https://mundocomputoo.vercel.app/a\u001b[7mdmin\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"https://mundocomputoo.vercel.app/a\u001b[7muth\u001b[27m\"\u001b[39m\n\n\u001b[0m \u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 |\u001b[39m     expect(page\u001b[33m.\u001b[39murl())\u001b[33m.\u001b[39mtoBe(currentUrl)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 52 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 53 |\u001b[39m\n \u001b[90m 54 |\u001b[39m   test(\u001b[32m'debe cerrar sesión correctamente'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:51:24\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1454,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:35.596Z",
+                      "startTime": "2025-10-18T18:17:04.667Z",
                       "annotations": [],
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-62491-sesión-después-de-refrescar-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-62491-sesión-después-de-refrescar-chromium/error-context.md"
-                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-62491-sesión-después-de-refrescar-chromium/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                        "column": 24,
-                        "line": 51
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "d748ac400d08b85935ef-be9b58023aed51f2e0b9",
               "file": "auth.spec.ts",
-              "line": 46,
+              "line": 66,
               "column": 3
             },
             {
               "title": "debe cerrar sesión correctamente",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -495,65 +393,31 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 12,
-                      "parallelIndex": 3,
-                      "status": "failed",
-                      "duration": 5848,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:57:24",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                          "column": 24,
-                          "line": 57
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 55 |\u001b[39m     \u001b[90m// Solo navegar a la página principal\u001b[39m\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                            "column": 24,
-                            "line": 57
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 55 |\u001b[39m     \u001b[90m// Solo navegar a la página principal\u001b[39m\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/$/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts:57:24\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 780,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:35.597Z",
+                      "startTime": "2025-10-18T18:17:04.695Z",
                       "annotations": [],
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-be38e-cerrar-sesión-correctamente-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-be38e-cerrar-sesión-correctamente-chromium/error-context.md"
-                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/auth-Navegación-después-de-be38e-cerrar-sesión-correctamente-chromium/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/auth.spec.ts",
-                        "column": 24,
-                        "line": 57
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "d748ac400d08b85935ef-058345b4908a16147bcb",
               "file": "auth.spec.ts",
-              "line": 54,
+              "line": 74,
               "column": 3
             }
           ]
@@ -574,80 +438,6 @@
           "column": 6,
           "specs": [
             {
-              "title": "debe navegar a inventario",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 13,
-                      "parallelIndex": 4,
-                      "status": "failed",
-                      "duration": 6247,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/inventario/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/inventario/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/inventory.spec.ts:10:24",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/inventory.spec.ts",
-                          "column": 24,
-                          "line": 10
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe navegar a inventario'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/inventario/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'debe mostrar stock de productos'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/inventory.spec.ts",
-                            "column": 24,
-                            "line": 10
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/inventario/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe navegar a inventario'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/inventario/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'debe mostrar stock de productos'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/inventory.spec.ts:10:24\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-18T17:20:35.607Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/inventory-Gestión-de-Inven-6007c-E-debe-navegar-a-inventario-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/inventory-Gestión-de-Inven-6007c-E-debe-navegar-a-inventario-chromium/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/inventory-Gestión-de-Inven-6007c-E-debe-navegar-a-inventario-chromium/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/inventory.spec.ts",
-                        "column": 24,
-                        "line": 10
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "491382254a121adeeb47-a4df6716aa8eb45c3d31",
-              "file": "inventory.spec.ts",
-              "line": 9,
-              "column": 3
-            },
-            {
               "title": "debe mostrar stock de productos",
               "ok": true,
               "tags": [],
@@ -660,15 +450,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1248,
+                      "duration": 1616,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:37.490Z",
+                      "startTime": "2025-10-18T18:17:04.703Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -684,7 +474,7 @@
               ],
               "id": "491382254a121adeeb47-c60b3546ef8e0cef8395",
               "file": "inventory.spec.ts",
-              "line": 13,
+              "line": 22,
               "column": 3
             },
             {
@@ -700,15 +490,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1289,
+                      "duration": 1524,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:38.864Z",
+                      "startTime": "2025-10-18T18:17:04.865Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -724,7 +514,7 @@
               ],
               "id": "491382254a121adeeb47-db9b5e18e6d14ce19fb7",
               "file": "inventory.spec.ts",
-              "line": 18,
+              "line": 26,
               "column": 3
             },
             {
@@ -740,15 +530,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1279,
+                      "duration": 1569,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:40.194Z",
+                      "startTime": "2025-10-18T18:17:05.537Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -764,7 +554,7 @@
               ],
               "id": "491382254a121adeeb47-69e9548af6ae27fd5552",
               "file": "inventory.spec.ts",
-              "line": 23,
+              "line": 30,
               "column": 3
             },
             {
@@ -780,15 +570,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1325,
+                      "duration": 1548,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:40.868Z",
+                      "startTime": "2025-10-18T18:17:06.171Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -804,7 +594,7 @@
               ],
               "id": "491382254a121adeeb47-6e6bbee64694027d1957",
               "file": "inventory.spec.ts",
-              "line": 28,
+              "line": 34,
               "column": 3
             },
             {
@@ -820,15 +610,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1190,
+                      "duration": 1582,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:41.518Z",
+                      "startTime": "2025-10-18T18:17:06.373Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -844,7 +634,7 @@
               ],
               "id": "491382254a121adeeb47-3d8c2d4643d9a3ec2c1b",
               "file": "inventory.spec.ts",
-              "line": 33,
+              "line": 38,
               "column": 3
             },
             {
@@ -860,15 +650,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1234,
+                      "duration": 1561,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:41.854Z",
+                      "startTime": "2025-10-18T18:17:06.440Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -884,7 +674,7 @@
               ],
               "id": "491382254a121adeeb47-8b70939c4b461101453e",
               "file": "inventory.spec.ts",
-              "line": 38,
+              "line": 42,
               "column": 3
             },
             {
@@ -900,15 +690,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1220,
+                      "duration": 1631,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:42.136Z",
+                      "startTime": "2025-10-18T18:17:07.170Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -924,7 +714,7 @@
               ],
               "id": "491382254a121adeeb47-a70872c6f3441fee0e9e",
               "file": "inventory.spec.ts",
-              "line": 43,
+              "line": 46,
               "column": 3
             }
           ]
@@ -932,7 +722,7 @@
         {
           "title": "Alertas de Stock",
           "file": "inventory.spec.ts",
-          "line": 49,
+          "line": 51,
           "column": 6,
           "specs": [
             {
@@ -948,15 +738,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 113,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1267,
+                      "duration": 1182,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:42.341Z",
+                      "startTime": "2025-10-18T18:17:07.418Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -972,7 +762,7 @@
               ],
               "id": "491382254a121adeeb47-d5b9d1b6772ea97fa86d",
               "file": "inventory.spec.ts",
-              "line": 55,
+              "line": 57,
               "column": 3
             },
             {
@@ -988,15 +778,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1254,
+                      "duration": 1197,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:42.335Z",
+                      "startTime": "2025-10-18T18:17:07.769Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1012,7 +802,7 @@
               ],
               "id": "491382254a121adeeb47-8ec1c7ef337f77da8254",
               "file": "inventory.spec.ts",
-              "line": 60,
+              "line": 61,
               "column": 3
             },
             {
@@ -1028,15 +818,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1189,
+                      "duration": 1181,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:42.752Z",
+                      "startTime": "2025-10-18T18:17:08.020Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1060,7 +850,7 @@
         {
           "title": "Integridad de Inventario",
           "file": "inventory.spec.ts",
-          "line": 71,
+          "line": 70,
           "column": 6,
           "specs": [
             {
@@ -1076,15 +866,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1294,
+                      "duration": 1208,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:43.227Z",
+                      "startTime": "2025-10-18T18:17:08.064Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1100,7 +890,7 @@
               ],
               "id": "491382254a121adeeb47-0cd4bfda2041a474db18",
               "file": "inventory.spec.ts",
-              "line": 77,
+              "line": 76,
               "column": 3
             },
             {
@@ -1116,15 +906,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1196,
+                      "duration": 1214,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:43.507Z",
+                      "startTime": "2025-10-18T18:17:08.657Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1140,7 +930,7 @@
               ],
               "id": "491382254a121adeeb47-f36241827f61c6eb1ae5",
               "file": "inventory.spec.ts",
-              "line": 82,
+              "line": 80,
               "column": 3
             },
             {
@@ -1156,15 +946,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1201,
+                      "duration": 1189,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:43.638Z",
+                      "startTime": "2025-10-18T18:17:08.847Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1180,7 +970,7 @@
               ],
               "id": "491382254a121adeeb47-8c6f38f947b44223c1a4",
               "file": "inventory.spec.ts",
-              "line": 87,
+              "line": 84,
               "column": 3
             }
           ]
@@ -1213,15 +1003,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1130,
+                      "duration": 1132,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:43.739Z",
+                      "startTime": "2025-10-18T18:17:09.009Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1253,15 +1043,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1128,
+                      "duration": 1146,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:43.992Z",
+                      "startTime": "2025-10-18T18:17:09.247Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1293,15 +1083,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1132,
+                      "duration": 1148,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:44.566Z",
+                      "startTime": "2025-10-18T18:17:09.333Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1333,15 +1123,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1131,
+                      "duration": 1208,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:44.751Z",
+                      "startTime": "2025-10-18T18:17:09.917Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1373,15 +1163,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1148,
+                      "duration": 1122,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:44.885Z",
+                      "startTime": "2025-10-18T18:17:10.080Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1413,15 +1203,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1120,
+                      "duration": 1117,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:44.913Z",
+                      "startTime": "2025-10-18T18:17:10.183Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1453,15 +1243,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1136,
+                      "duration": 1132,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:45.163Z",
+                      "startTime": "2025-10-18T18:17:10.436Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1493,15 +1283,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1144,
+                      "duration": 1088,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:45.739Z",
+                      "startTime": "2025-10-18T18:17:10.523Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1533,15 +1323,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1213,
+                      "duration": 1194,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:45.921Z",
+                      "startTime": "2025-10-18T18:17:11.166Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1573,15 +1363,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 115,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1144,
+                      "duration": 1117,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:46.074Z",
+                      "startTime": "2025-10-18T18:17:11.243Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1613,15 +1403,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1144,
+                      "duration": 1107,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:46.074Z",
+                      "startTime": "2025-10-18T18:17:11.340Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1653,7 +1443,7 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 112,
                       "parallelIndex": 1,
                       "status": "passed",
                       "duration": 1141,
@@ -1661,7 +1451,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:46.342Z",
+                      "startTime": "2025-10-18T18:17:11.611Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1701,15 +1491,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1287,
+                      "duration": 1127,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:46.930Z",
+                      "startTime": "2025-10-18T18:17:11.654Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1741,15 +1531,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1142,
+                      "duration": 1207,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:47.178Z",
+                      "startTime": "2025-10-18T18:17:12.404Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1781,15 +1571,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 113,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1173,
+                      "duration": 1138,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:47.262Z",
+                      "startTime": "2025-10-18T18:17:12.405Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1821,15 +1611,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1156,
+                      "duration": 1137,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:47.263Z",
+                      "startTime": "2025-10-18T18:17:12.491Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1866,80 +1656,6 @@
           "column": 6,
           "specs": [
             {
-              "title": "debe navegar a registro de ventas",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 14,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 6203,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ventas/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ventas/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/sales.spec.ts:10:24",
-                        "location": {
-                          "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/sales.spec.ts",
-                          "column": 24,
-                          "line": 10
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe navegar a registro de ventas'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/ventas/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'debe seleccionar cliente para venta'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/sales.spec.ts",
-                            "column": 24,
-                            "line": 10
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/ventas/\u001b[39m\nReceived string:  \u001b[31m\"https://mundocomputoo.vercel.app/auth\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"https://mundocomputoo.vercel.app/auth\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m   test(\u001b[32m'debe navegar a registro de ventas'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/ventas/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'debe seleccionar cliente para venta'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/sales.spec.ts:10:24\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-10-18T17:20:47.532Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/sales-Proceso-de-Ventas-E2-00fad-avegar-a-registro-de-ventas-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/sales-Proceso-de-Ventas-E2-00fad-avegar-a-registro-de-ventas-chromium/error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/Users/breyner/Documents/GitHub/mundoComputoFase2/test-results/sales-Proceso-de-Ventas-E2-00fad-avegar-a-registro-de-ventas-chromium/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/breyner/Documents/GitHub/mundoComputoFase2/tests/e2e/sales.spec.ts",
-                        "column": 24,
-                        "line": 10
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "9732fc60f5589579a1d1-481dfe18452c3db69f4a",
-              "file": "sales.spec.ts",
-              "line": 9,
-              "column": 3
-            },
-            {
               "title": "debe seleccionar cliente para venta",
               "ok": true,
               "tags": [],
@@ -1952,15 +1668,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 112,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1202,
+                      "duration": 1203,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:48.268Z",
+                      "startTime": "2025-10-18T18:17:12.800Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1976,7 +1692,7 @@
               ],
               "id": "9732fc60f5589579a1d1-144a8f09df9c3493ae60",
               "file": "sales.spec.ts",
-              "line": 13,
+              "line": 9,
               "column": 3
             },
             {
@@ -1992,15 +1708,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1188,
+                      "duration": 1200,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:48.368Z",
+                      "startTime": "2025-10-18T18:17:12.826Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2016,7 +1732,7 @@
               ],
               "id": "9732fc60f5589579a1d1-5288cba9c4e90640ca1e",
               "file": "sales.spec.ts",
-              "line": 18,
+              "line": 14,
               "column": 3
             },
             {
@@ -2032,15 +1748,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 113,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1270,
+                      "duration": 1212,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:48.469Z",
+                      "startTime": "2025-10-18T18:17:13.590Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2056,7 +1772,7 @@
               ],
               "id": "9732fc60f5589579a1d1-445ad6a4bfd8600bf6d9",
               "file": "sales.spec.ts",
-              "line": 23,
+              "line": 19,
               "column": 3
             },
             {
@@ -2072,15 +1788,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 115,
                       "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1191,
+                      "duration": 1207,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:48.482Z",
+                      "startTime": "2025-10-18T18:17:13.662Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2096,7 +1812,7 @@
               ],
               "id": "9732fc60f5589579a1d1-07822dbced7b0ce62e97",
               "file": "sales.spec.ts",
-              "line": 28,
+              "line": 24,
               "column": 3
             },
             {
@@ -2112,15 +1828,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
+                      "workerIndex": 114,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1194,
+                      "duration": 1200,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:49.514Z",
+                      "startTime": "2025-10-18T18:17:13.676Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2136,7 +1852,7 @@
               ],
               "id": "9732fc60f5589579a1d1-0406fdfdbcb9d78d841a",
               "file": "sales.spec.ts",
-              "line": 33,
+              "line": 29,
               "column": 3
             },
             {
@@ -2152,15 +1868,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 112,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1206,
+                      "duration": 1204,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:49.600Z",
+                      "startTime": "2025-10-18T18:17:14.050Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2176,7 +1892,7 @@
               ],
               "id": "9732fc60f5589579a1d1-125950dd48dacfaa526c",
               "file": "sales.spec.ts",
-              "line": 38,
+              "line": 34,
               "column": 3
             },
             {
@@ -2192,15 +1908,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1212,
+                      "duration": 1194,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:49.715Z",
+                      "startTime": "2025-10-18T18:17:14.073Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2216,7 +1932,7 @@
               ],
               "id": "9732fc60f5589579a1d1-39c4342da496767f6e9d",
               "file": "sales.spec.ts",
-              "line": 43,
+              "line": 39,
               "column": 3
             },
             {
@@ -2232,15 +1948,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 113,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1197,
+                      "duration": 1202,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:49.781Z",
+                      "startTime": "2025-10-18T18:17:14.851Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2256,7 +1972,7 @@
               ],
               "id": "9732fc60f5589579a1d1-e7f4084ad132cf5ab871",
               "file": "sales.spec.ts",
-              "line": 48,
+              "line": 44,
               "column": 3
             },
             {
@@ -2272,15 +1988,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1188,
+                      "duration": 1200,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:50.752Z",
+                      "startTime": "2025-10-18T18:17:14.917Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2296,7 +2012,7 @@
               ],
               "id": "9732fc60f5589579a1d1-2eabccfbb267e5e557ae",
               "file": "sales.spec.ts",
-              "line": 53,
+              "line": 49,
               "column": 3
             }
           ]
@@ -2304,7 +2020,7 @@
         {
           "title": "Validaciones de Venta",
           "file": "sales.spec.ts",
-          "line": 59,
+          "line": 55,
           "column": 6,
           "specs": [
             {
@@ -2320,15 +2036,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1240,
+                      "duration": 1200,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:50.850Z",
+                      "startTime": "2025-10-18T18:17:14.923Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2344,7 +2060,7 @@
               ],
               "id": "9732fc60f5589579a1d1-9c266a283a9c3cb7fc4d",
               "file": "sales.spec.ts",
-              "line": 65,
+              "line": 61,
               "column": 3
             },
             {
@@ -2360,15 +2076,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 112,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1209,
+                      "duration": 1184,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:50.972Z",
+                      "startTime": "2025-10-18T18:17:15.301Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2384,7 +2100,7 @@
               ],
               "id": "9732fc60f5589579a1d1-cd444f3ed5bfe4716287",
               "file": "sales.spec.ts",
-              "line": 70,
+              "line": 66,
               "column": 3
             },
             {
@@ -2400,15 +2116,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 111,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1201,
+                      "duration": 1206,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:51.023Z",
+                      "startTime": "2025-10-18T18:17:15.311Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2424,7 +2140,7 @@
               ],
               "id": "9732fc60f5589579a1d1-60a4c03113f24045c249",
               "file": "sales.spec.ts",
-              "line": 75,
+              "line": 71,
               "column": 3
             },
             {
@@ -2440,15 +2156,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 113,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1193,
+                      "duration": 1204,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:51.981Z",
+                      "startTime": "2025-10-18T18:17:16.098Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2464,7 +2180,7 @@
               ],
               "id": "9732fc60f5589579a1d1-e74461d420908d5ec23c",
               "file": "sales.spec.ts",
-              "line": 80,
+              "line": 76,
               "column": 3
             },
             {
@@ -2480,15 +2196,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
-                      "parallelIndex": 2,
+                      "workerIndex": 115,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 1252,
+                      "duration": 1337,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:52.137Z",
+                      "startTime": "2025-10-18T18:17:16.164Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2504,7 +2220,7 @@
               ],
               "id": "9732fc60f5589579a1d1-5c37d373bc4896d320c2",
               "file": "sales.spec.ts",
-              "line": 85,
+              "line": 81,
               "column": 3
             }
           ]
@@ -2512,7 +2228,7 @@
         {
           "title": "Historial de Ventas",
           "file": "sales.spec.ts",
-          "line": 91,
+          "line": 87,
           "column": 6,
           "specs": [
             {
@@ -2528,15 +2244,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
-                      "parallelIndex": 4,
+                      "workerIndex": 114,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 1183,
+                      "duration": 1264,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:52.224Z",
+                      "startTime": "2025-10-18T18:17:16.169Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2552,7 +2268,7 @@
               ],
               "id": "9732fc60f5589579a1d1-1ba41d7ca8699ace75d5",
               "file": "sales.spec.ts",
-              "line": 97,
+              "line": 93,
               "column": 3
             },
             {
@@ -2568,15 +2284,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
-                      "parallelIndex": 0,
+                      "workerIndex": 112,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1201,
+                      "duration": 1260,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:52.273Z",
+                      "startTime": "2025-10-18T18:17:16.526Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2592,7 +2308,7 @@
               ],
               "id": "9732fc60f5589579a1d1-19b9af4560ce9ccd0c26",
               "file": "sales.spec.ts",
-              "line": 102,
+              "line": 98,
               "column": 3
             },
             {
@@ -2608,15 +2324,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 16,
-                      "parallelIndex": 3,
+                      "workerIndex": 111,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1189,
+                      "duration": 1204,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:53.217Z",
+                      "startTime": "2025-10-18T18:17:16.560Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2632,7 +2348,7 @@
               ],
               "id": "9732fc60f5589579a1d1-e8a7946a9df160b89cf8",
               "file": "sales.spec.ts",
-              "line": 107,
+              "line": 103,
               "column": 3
             },
             {
@@ -2648,15 +2364,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 113,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 1266,
+                      "duration": 1211,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-10-18T17:20:53.442Z",
+                      "startTime": "2025-10-18T18:17:17.344Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -2672,7 +2388,7 @@
               ],
               "id": "9732fc60f5589579a1d1-92e4538313552b773d55",
               "file": "sales.spec.ts",
-              "line": 112,
+              "line": 108,
               "column": 3
             }
           ]
@@ -2682,11 +2398,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-18T17:20:32.845Z",
-    "duration": 21927.968999999997,
-    "expected": 51,
+    "startTime": "2025-10-18T18:17:02.103Z",
+    "duration": 16515.7919999999,
+    "expected": 55,
     "skipped": 0,
-    "unexpected": 6,
+    "unexpected": 0,
     "flaky": 0
   }
 }

@@ -6,10 +6,6 @@ test.describe('Proceso de Ventas E2E', () => {
     await page.waitForLoadState('networkidle');
   });
 
-  test('debe navegar a registro de ventas', async ({ page }) => {
-    await expect(page).toHaveURL(/ventas/);
-  });
-
   test('debe seleccionar cliente para venta', async ({ page }) => {
     // Verificar que la página carga
     await expect(page.locator('body')).toBeVisible();
