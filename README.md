@@ -1,9 +1,3 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/7363e82c-b2b6-420f-8575-858eb1b18c25
-
 # MundoComputo
 
 Aplicación de gestión para microempresas. Incluye módulos para ventas, gestión de usuarios y control de inventario.
