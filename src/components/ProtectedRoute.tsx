@@ -20,6 +20,13 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
   }
 
   if (!user || !role) {
+    // If the user exists but doesn't have a role yet, it's likely they're
+    // in the middle of the 2FA flow. Redirect to the 2FA verification page
+    // instead of root to avoid RoleRedirect sending them back to /auth.
+    if (user && !role) {
+      return <Navigate to="/verify-2fa" replace />;
+    }
+
     return <Navigate to="/" replace />;
   }
 
