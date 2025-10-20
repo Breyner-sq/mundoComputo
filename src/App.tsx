@@ -1,14 +1,15 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { AccessibilityMenu } from "@/components/AccessibilityMenu";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { AccessibilityMenu } from "@/components/AccessibilityMenu";
 import { ThemeProvider } from '@/components/theme-provider';
 import Auth from "./pages/Auth";
 import RoleRedirect from "./pages/RoleRedirect";
+import Verify2FA from "./pages/Verify2FA";
 import Unauthorized from "./pages/Unauthorized";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import GestionUsuarios from "./pages/admin/GestionUsuarios";
@@ -27,24 +28,16 @@ import InventarioStock from "./pages/inventario/InventarioStock";
 import Perfil from "./pages/configuracion/Perfil";
 import NotFound from "./pages/NotFound";
 
-// Cliente de consultas global. Se encargga de gestionar el caché y las solicitudes de datos.
 const queryClient = new QueryClient();
 
-const APP_VERSION = "1.0.1";
 const App = () => (
   <QueryClientProvider client={queryClient}>
-
-    {/* Proveedor de temas: permite alternar entre modo claro/oscuro */}
     <ThemeProvider defaultTheme="system"  storageKey="app-theme">
       <TooltipProvider>
-
-        {/* Sistema de notificaciones visuales y alertas en pantalla */}
         <Toaster />
         <Sonner />
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <AuthProvider>
-
-            {/* Menú de accesibilidad: mejora la navegación para usuarios con limitaciones visuales */}
             <AccessibilityMenu />
             <Routes>
             <Route path="/auth" element={<Auth />} />
@@ -58,51 +51,31 @@ const App = () => (
                 <ProtectedRoute allowedRoles={['administrador']}>
                   <AdminDashboard />
                 </ProtectedRoute>
-              } />
-
-            {/* Ruta de administración: gestión de usuarios del sistema */}
+              }
+            />
             <Route
               path="/admin/usuarios"
               element={
                 <ProtectedRoute allowedRoles={['administrador']}>
                   <GestionUsuarios />
                 </ProtectedRoute>
-              } />
-
-            {/* Ruta de administración: registros de autenticación */}
+              }
+            />
             <Route
               path="/admin/auth-logs"
               element={
                 <ProtectedRoute allowedRoles={['administrador']}>
                   <AuthLogs />
                 </ProtectedRoute>
-              } />
+              }
+            />
             
             {/* Admin Ventas Routes */}
-            <Route
-              path="/admin/ventas"
-              element={
-                <ProtectedRoute allowedRoles={['administrador']}>
-                  <VentasDashboard />
-                </ProtectedRoute>} />
-            <Route
-              path="/admin/ventas/registro" 
-              element={
-                <ProtectedRoute allowedRoles={['administrador']}>
-                  <VentasRegistro />
-                </ProtectedRoute>} />
-            <Route 
-              path="/admin/ventas/clientes" 
-              element={
-                <ProtectedRoute allowedRoles={['administrador']}>
-                  <VentasClientes />
-                </ProtectedRoute>} />
-            <Route 
-              path="/admin/ventas/estadisticas" 
-              element={
-                <ProtectedRoute allowedRoles={['administrador']}>
-                  <VentasEstadisticas />
-                </ProtectedRoute>} />                                                                                
+            <Route path="/admin/ventas" element={<ProtectedRoute allowedRoles={['administrador']}><VentasDashboard /></ProtectedRoute>} />
+            <Route path="/admin/ventas/registro" element={<ProtectedRoute allowedRoles={['administrador']}><VentasRegistro /></ProtectedRoute>} />
+            <Route path="/admin/ventas/clientes" element={<ProtectedRoute allowedRoles={['administrador']}><VentasClientes /></ProtectedRoute>} />
+            <Route path="/admin/ventas/estadisticas" element={<ProtectedRoute allowedRoles={['administrador']}><VentasEstadisticas /></ProtectedRoute>} />
+            <Route path="/verify-2fa" element={<Verify2FA />} />
             
             {/* Tecnico Routes */}
             <Route
