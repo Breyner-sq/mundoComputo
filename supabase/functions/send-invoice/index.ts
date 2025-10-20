@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") || "re_NSsSUdAo_L3Ae665nppgUThqTyHnFTJoV";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -21,6 +21,15 @@ interface InvoiceRequest {
   date: string;
 }
 
+function escapeHtml(unsafe: string) {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -29,17 +38,31 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { clientEmail, clientName, invoiceNumber, items, total, date }: InvoiceRequest = await req.json();
 
+    // Basic validation
+    if (!RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return new Response(JSON.stringify({ error: 'Server configuration error: RESEND_API_KEY missing' }), { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!clientEmail || !emailRegex.test(clientEmail)) {
+      return new Response(JSON.stringify({ error: 'Invalid clientEmail' }), { status: 400, headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+    }
+
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return new Response(JSON.stringify({ error: 'Items must be a non-empty array' }), { status: 400, headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+    }
+
     const itemsHtml = items.map(item => `
       <tr>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${item.product}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">${item.quantity}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">$${item.price.toFixed(2)}</td>
-        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">$${item.subtotal.toFixed(2)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">${escapeHtml(String(item.product || ''))}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: center;">${Number(item.quantity)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">$${Number(item.price).toFixed(2)}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; text-align: right;">$${Number(item.subtotal).toFixed(2)}</td>
       </tr>
     `).join('');
 
     const emailBody = {
-      from: "Sistema de Ventas <onboarding@resend.dev>",
+      from: "Sistema de Ventas <ventas@email.juanchito.me>",
       to: [clientEmail],
       subject: `Factura #${invoiceNumber}`,
       html: `
@@ -94,26 +117,45 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     };
 
-    const emailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-      },
-      body: JSON.stringify(emailBody),
-    });
+    // Timeout setup for fetch
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
 
-    const emailData = await emailResponse.json();
+    try {
+      const emailResponse = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
+        },
+        body: JSON.stringify(emailBody),
+        signal: controller.signal,
+      });
 
-    console.log("Invoice email sent successfully:", emailData);
+      clearTimeout(timeout);
 
-    return new Response(JSON.stringify(emailData), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        ...corsHeaders,
-      },
-    });
+      const contentType = emailResponse.headers.get('content-type') || '';
+      const emailData = contentType.includes('application/json') ? await emailResponse.json() : { status: emailResponse.status };
+
+      if (!emailResponse.ok) {
+        console.error('Resend API returned error', emailResponse.status, emailData);
+        return new Response(JSON.stringify({ error: 'Error sending email', details: emailData }), { status: 502, headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+      }
+
+      // Success
+      console.log('Invoice email sent successfully');
+      return new Response(JSON.stringify(emailData), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
+      });
+    } catch (err: any) {
+      clearTimeout(timeout);
+      if (err.name === 'AbortError') {
+        console.error('Resend request timed out');
+        return new Response(JSON.stringify({ error: 'External service timeout' }), { status: 504, headers: { 'Content-Type': 'application/json', ...corsHeaders } });
+      }
+      throw err;
+    }
   } catch (error: any) {
     console.error("Error sending invoice:", error);
     return new Response(

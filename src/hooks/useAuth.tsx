@@ -64,7 +64,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       // Verificar si el usuario está activo
       const { data: profile, error: profileError } = await supabase
         .from('profiles')
-        .select('activo')
+        .select('activo, mfa_verified')
         .eq('id', userId)
         .single();
 
@@ -79,6 +79,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         });
         setRole(null);
         setLoading(false);
+        return;
+      }
+
+      // If the profile exists and MFA is not verified, redirect to 2FA verification
+      if (profile && profile.mfa_verified === false) {
+        setRole(null);
+        setLoading(false);
+        navigate('/verify-2fa');
         return;
       }
 
@@ -107,10 +115,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) throw error;
 
+      // Trigger 2FA code to be sent via Supabase Functions
+      try {
+        await supabase.functions.invoke('send-2fa', { body: { email } });
+      } catch (err) {
+        console.error('Failed to trigger 2FA send via Supabase Functions:', err);
+      }
+
       toast({
-        title: 'Inicio de sesión exitoso',
-        description: 'Bienvenido a MundoComputo',
+        title: 'Código enviado',
+        description: 'Se ha enviado un código a tu correo. Verifícalo para continuar.',
       });
+
+      // Navigate to verification page
+      navigate('/verify-2fa');
     } catch (error: any) {
       toast({
         title: 'Error al iniciar sesión',

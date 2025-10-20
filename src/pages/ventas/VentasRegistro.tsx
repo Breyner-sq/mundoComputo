@@ -394,6 +394,8 @@ export default function VentasRegistro() {
           date: new Date().toISOString(),
         },
       });
+      console.log('Invoice sent successfully');
+      console.log(cliente.email);
     } catch (error) {
       console.error('Error sending invoice:', error);
     }

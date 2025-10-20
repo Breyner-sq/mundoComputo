@@ -9,6 +9,7 @@ import { AccessibilityMenu } from "@/components/AccessibilityMenu";
 import { ThemeProvider } from '@/components/theme-provider';
 import Auth from "./pages/Auth";
 import RoleRedirect from "./pages/RoleRedirect";
+import Verify2FA from "./pages/Verify2FA";
 import Unauthorized from "./pages/Unauthorized";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import GestionUsuarios from "./pages/admin/GestionUsuarios";
@@ -74,6 +75,7 @@ const App = () => (
             <Route path="/admin/ventas/registro" element={<ProtectedRoute allowedRoles={['administrador']}><VentasRegistro /></ProtectedRoute>} />
             <Route path="/admin/ventas/clientes" element={<ProtectedRoute allowedRoles={['administrador']}><VentasClientes /></ProtectedRoute>} />
             <Route path="/admin/ventas/estadisticas" element={<ProtectedRoute allowedRoles={['administrador']}><VentasEstadisticas /></ProtectedRoute>} />
+            <Route path="/verify-2fa" element={<Verify2FA />} />
             
             {/* Tecnico Routes */}
             <Route
