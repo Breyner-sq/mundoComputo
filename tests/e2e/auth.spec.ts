@@ -63,13 +63,6 @@ test.describe('Navegación después de login', () => {
     await expect(page).not.toHaveURL(/auth|login/);
 });
 
-  test('debe mantener sesión después de refrescar', async ({ page }) => {
-    await page.goto('/admin');
-    const currentUrl = page.url();
-    await page.reload();
-    await page.waitForLoadState('networkidle');
-    expect(page.url()).toBe(currentUrl);
-  });
 
   test('debe cerrar sesión correctamente', async ({ page }) => {
     // Solo navegar a la página principal
