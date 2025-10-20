@@ -4,70 +4,44 @@
 
 **URL**: https://lovable.dev/projects/7363e82c-b2b6-420f-8575-858eb1b18c25
 
-## How can I edit this code?
+# MundoComputo
 
-There are several ways of editing your application.
+Aplicación de gestión para microempresas. Incluye módulos para ventas, gestión de usuarios y control de inventario.
 
-**Use Lovable**
+Principales módulos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7363e82c-b2b6-420f-8575-858eb1b18c25) and start prompting.
+- Ventas: registrar ventas, generar facturas y enviar notificaciones.
+- Usuarios: gestión de cuentas y roles.
+- Inventario: productos, lotes y control de stock.
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Clonar el repositorio
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Breyner-sq/mundoComputo.git
+cd mundoComputo
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Instalar y ejecutar en desarrollo
 
-# Step 3: Install the necessary dependencies.
-npm i
+Node (recomendado):
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Notas importantes
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- La aplicación usa Supabase para autenticación y funciones server-side. Antes de ejecutar algunas funcionalidades (envío de correos, funciones), configura las variables de entorno de Supabase en tu entorno local o en el panel de Supabase.
+- Si vas a ejecutar las funciones Deno localmente, asegúrate de tener Deno instalado y de exportar las variables necesarias (p. ej. `RESEND_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`).
 
-**Use GitHub Codespaces**
+Estructura básica
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `src/`: código cliente React
+- `supabase/functions/`: funciones server-side (Deno) para envíos y utilidades
+- `supabase/migrations/`: migraciones SQL
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7363e82c-b2b6-420f-8575-858eb1b18c25) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Si necesitas instrucciones avanzadas (despliegue, migraciones automáticas o variables de entorno específicas), dime qué plataforma usas y lo detallo.
